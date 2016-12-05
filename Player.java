@@ -49,23 +49,18 @@ public class Player {
 	}
 	public int getTotalValue() 
 	{
-		
-			
-			int totalnum= 0;
-			for (Card c : oneRoundCard) 
+		int totalnum= 0;
+		for (Card c : oneRoundCard) 
+		{
+			if (c.getRank() == 11 || c.getRank() == 12 || c.getRank() == 13)
 			{
-				
-				if (c.getRank() == 11 || c.getRank() == 12 || c.getRank() == 13)
-				{
-					totalnum += 10;
-				}		
-				else
-				{
-					totalnum += c.getRank();
-				}		
-				
-				
-			}
+				totalnum += 10;
+			}		
+			else
+			{
+				totalnum += c.getRank();
+			}		
+		}
 		
 		return totalnum;
 	}
